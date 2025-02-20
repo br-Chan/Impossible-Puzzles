@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
+import KonigsbergView from "@/views/KonigsbergView.vue";
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -8,6 +9,11 @@ const router = createRouter({
             path: "/",
             name: "home",
             component: HomeView,
+        },
+        {
+            path: "/konigsberg",
+            name: "Königsberg bridge problem",
+            component: KonigsbergView,
         },
         {
             path: "/about",
