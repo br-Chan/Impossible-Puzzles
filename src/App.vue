@@ -7,17 +7,18 @@ import { RouterLink, RouterView } from "vue-router";
         <!-- <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" /> -->
 
         <div class="wrapper">
-            <h1 class="green">I dare you to solve...</h1>
+            <h1 class="green">I dare you to...</h1>
 
             <nav>
                 <RouterLink to="/">Home</RouterLink>
-                <RouterLink to="/konigsberg">the Königsberg bridge problem</RouterLink>
+                <RouterLink to="/konigsberg">cross some bridges</RouterLink>
                 <RouterLink to="/about">About</RouterLink>
             </nav>
         </div>
     </header>
-
-    <RouterView />
+    <div class="view">
+        <RouterView />
+    </div>
 </template>
 
 <style scoped>
@@ -62,6 +63,10 @@ nav a {
     border-bottom-right-radius: calc(infinity * 1px);
 }
 
+.view {
+    margin-top: 4rem;
+}
+
 @media (min-width: 1024px) {
     header {
         display: flex;
@@ -77,6 +82,7 @@ nav a {
         display: flex;
         place-items: flex-start;
         flex-wrap: wrap;
+        margin-left: 125px;
     }
 
     nav {
