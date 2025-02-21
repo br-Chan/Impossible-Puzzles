@@ -25,6 +25,7 @@ import { RouterLink, RouterView } from "vue-router";
 header {
     line-height: 1.5;
     max-height: 100vh;
+    border-bottom: 1px solid var(--color-border);
 }
 
 .logo {
@@ -64,14 +65,21 @@ nav a {
 }
 
 .view {
-    margin-top: 4rem;
+    display: flex;
+    flex: 2;
+    padding: 2rem;
+    padding-bottom: 0rem;
+    min-height: 100vh;
 }
 
 @media (min-width: 1024px) {
     header {
         display: flex;
+        flex: 1;
         place-items: center;
-        padding-right: calc(var(--section-gap) / 2);
+        padding: 2rem;
+        padding-bottom: 0rem;
+        border-right: 1px solid var(--color-border);
     }
 
     .logo {
@@ -82,7 +90,6 @@ nav a {
         display: flex;
         place-items: flex-start;
         flex-wrap: wrap;
-        margin-left: 125px;
     }
 
     nav {

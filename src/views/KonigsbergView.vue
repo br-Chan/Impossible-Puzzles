@@ -7,18 +7,14 @@ const stage = ref(0);
 
 <template>
     <div class="konigsberg">
-        <KonigsbergPuzzle />
+        <KonigsbergPuzzle v-if="stage === 0" />
     </div>
 </template>
 
 <style>
-h1 {
-    text-align: center;
-}
-
 @media (min-width: 1024px) {
     .konigsberg {
-        min-height: 100vh;
+        
         display: flex;
     }
 }
