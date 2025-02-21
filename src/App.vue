@@ -67,8 +67,6 @@ nav a {
 .view {
     display: flex;
     flex: 2;
-    padding: 2rem;
-    padding-bottom: 0rem;
     min-height: 100vh;
 }
 
@@ -98,6 +96,11 @@ nav a {
         font-size: 1rem;
 
         margin-top: 1rem;
+    }
+
+    .view {
+        padding: 2rem;
+        padding-bottom: 0rem;
     }
 }
 </style>

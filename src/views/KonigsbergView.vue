@@ -14,7 +14,6 @@ const stage = ref(0);
 <style>
 @media (min-width: 1024px) {
     .konigsberg {
-        
         display: flex;
     }
 }
