@@ -1,13 +1,25 @@
 <script setup lang="ts">
+import KonigsbergPhase1 from "@/components/konigsberg/KonigsbergPhase1.vue";
+import KonigsbergPhase2 from "@/components/konigsberg/KonigsbergPhase2.vue";
 import { ref } from "vue";
-import KonigsbergPuzzle from "../components/konigsberg/KonigsbergPuzzle.vue";
 
-const stage = ref(0);
+enum Phase {
+    PHASE_1,
+    PHASE_2,
+    PHASE_3,
+}
+
+const phase = ref(Phase.PHASE_1);
+
+const moveToNextPhase = (): void => {
+    ++phase.value;
+};
 </script>
 
 <template>
     <main>
-        <KonigsbergPuzzle v-if="stage === 0" />
+        <KonigsbergPhase1 v-if="phase === Phase.PHASE_1" :handle-give-up="moveToNextPhase" />
+        <KonigsbergPhase2 v-else-if="phase === Phase.PHASE_2" />
     </main>
 </template>
 

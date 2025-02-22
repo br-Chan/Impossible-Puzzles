@@ -1,4 +1,10 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+type KonigsbergPhase1Props = {
+    handleGiveUp: () => void;
+};
+
+const props = defineProps<KonigsbergPhase1Props>();
+</script>
 
 <template>
     <div class="puzzle">
@@ -21,7 +27,7 @@
 
         <div class="prompt">
             <h3>Can you cross all bridges once (and only once)? Or will you...</h3>
-            <button>Give up!</button>
+            <button @click="handleGiveUp">Give up!</button>
         </div>
     </div>
 </template>
