@@ -7,14 +7,14 @@ import { RouterLink, RouterView } from "vue-router";
         <!-- <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" /> -->
 
         <div class="wrapper">
-            <h1 class="green">I dare you to...</h1>
+            <h1 class="green">I dare you...</h1>
 
             <nav>
-                <RouterLink to="/konigsberg">cross some bridges</RouterLink>
-                <RouterLink to="/">colour in a map</RouterLink>
-                <RouterLink to="/">turn some cups around</RouterLink>
-                <RouterLink to="/">move a chess piece</RouterLink>
-                <RouterLink to="/">solve a sliding puzzle</RouterLink>
+                <RouterLink to="/konigsberg">to cross some bridges</RouterLink>
+                <RouterLink to="/">to colour in a map</RouterLink>
+                <RouterLink to="/">to turn some cups around</RouterLink>
+                <RouterLink to="/">to move a chess piece</RouterLink>
+                <RouterLink to="/">to solve a sliding puzzle</RouterLink>
                 <RouterLink to="/home">Home</RouterLink>
                 <RouterLink to="/about">About</RouterLink>
             </nav>
@@ -27,7 +27,7 @@ import { RouterLink, RouterView } from "vue-router";
 
 <style scoped>
 header {
-    line-height: 1.5;
+    /* line-height: 1.5; */
     max-height: 100vh;
     border-bottom: 1px solid var(--color-border);
 }
@@ -52,7 +52,7 @@ nav {
 
 nav a.router-link-exact-active {
     color: var(--color-text);
-    font-size: 2rem;
+    /* font-size: 2rem; */
 }
 
 nav a.router-link-exact-active:hover {
@@ -77,7 +77,7 @@ nav a {
     header {
         display: flex;
         flex: 1;
-        place-items: center;
+        place-items: start;
         padding: 2rem;
         padding-bottom: 0rem;
         border-right: 1px solid var(--color-border);
@@ -97,12 +97,10 @@ nav a {
         text-align: left;
         margin-left: -1rem;
         font-size: 1rem;
-
-        margin-top: 1rem;
     }
 
     .view {
-        flex: 2;
+        flex: 5;
         padding: 2rem;
         padding-bottom: 0rem;
     }

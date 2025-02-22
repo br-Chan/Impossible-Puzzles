@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import KonigsbergBridge from "./KonigsbergBridge.vue";
+import KonigsbergRiver from "./KonigsbergRiver.vue";
+
 type KonigsbergPhase1Props = {
     handleGiveUp: () => void;
 };
@@ -8,25 +11,28 @@ const props = defineProps<KonigsbergPhase1Props>();
 
 <template>
     <div class="puzzle">
-        <h1>Each bridge is one crossing away from tumbling into the river rapids!</h1>
+        <h1 class="green">...to cross some bridges</h1>
 
         <div class="box">
-            <div class="river upper-river"></div>
-            <div class="river left-river"></div>
-            <div class="river right-river"></div>
-            <div class="river lower-river"></div>
+            <KonigsbergRiver class="upper-river" />
+            <KonigsbergRiver class="left-river" />
+            <KonigsbergRiver class="right-river" />
+            <KonigsbergRiver class="lower-river" />
 
-            <div class="bridge bridge-1"></div>
-            <div class="bridge bridge-2"></div>
-            <div class="bridge bridge-3"></div>
-            <div class="bridge bridge-4"></div>
-            <div class="bridge bridge-5"></div>
-            <div class="bridge bridge-6"></div>
-            <div class="bridge bridge-7"></div>
+            <KonigsbergBridge class="bridge-1" />
+            <KonigsbergBridge class="bridge-2" />
+            <KonigsbergBridge class="bridge-3" />
+            <KonigsbergBridge class="bridge-4" />
+            <KonigsbergBridge class="bridge-5" />
+            <KonigsbergBridge class="bridge-6" />
+            <KonigsbergBridge class="bridge-7" />
         </div>
 
         <div class="prompt">
-            <h3>Can you cross all bridges once (and only once)? Or will you...</h3>
+            <h3>
+                Each bridge is one crossing away from tumbling into the river rapids! Can you cross
+                all bridges once (and only once)? Or will you...
+            </h3>
             <button @click="handleGiveUp">Give up!</button>
         </div>
     </div>
@@ -34,11 +40,21 @@ const props = defineProps<KonigsbergPhase1Props>();
 
 <style scoped>
 .puzzle {
+    margin-inline: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     gap: 1rem;
+}
+
+h1 {
+    width: 100%;
+    font-weight: 500;
+    font-size: 2.6rem;
+    position: relative;
+    text-align: left;
+    top: -10px;
 }
 
 .box {
@@ -63,12 +79,7 @@ const props = defineProps<KonigsbergPhase1Props>();
     mask: var(--mask);
 }
 
-.river {
-    background: cyan;
-}
-
 .upper-river {
-    position: absolute;
     top: 20%;
     left: 20%;
 
@@ -77,7 +88,6 @@ const props = defineProps<KonigsbergPhase1Props>();
 }
 
 .lower-river {
-    position: absolute;
     bottom: 15%;
 
     width: 100%;
@@ -85,7 +95,6 @@ const props = defineProps<KonigsbergPhase1Props>();
 }
 
 .left-river {
-    position: absolute;
     bottom: 15%;
     left: 20%;
 
@@ -94,7 +103,6 @@ const props = defineProps<KonigsbergPhase1Props>();
 }
 
 .right-river {
-    position: absolute;
     bottom: 15%;
     right: 30%;
 
@@ -102,58 +110,43 @@ const props = defineProps<KonigsbergPhase1Props>();
     height: 65%;
 }
 
-.bridge {
-    width: 1rem;
-    height: 2.5rem;
-    background-color: greenyellow;
-    border-left: 3px solid brown;
-    border-right: 3px solid brown;
-}
-
 .bridge-1 {
-    position: absolute;
     top: 15%;
     left: 30%;
     transform: rotate(-3deg);
 }
 
 .bridge-2 {
-    position: absolute;
     top: 17%;
     right: 20%;
     transform: rotate(5deg);
 }
 
 .bridge-3 {
-    position: absolute;
     top: 45%;
     left: 20%;
     transform: rotate(90deg);
 }
 
 .bridge-4 {
-    position: absolute;
     top: 47%;
     right: 30%;
     transform: rotate(90deg);
 }
 
 .bridge-5 {
-    position: absolute;
     bottom: 10%;
     left: 50%;
     transform: rotate(-1deg);
 }
 
 .bridge-6 {
-    position: absolute;
     bottom: 13%;
     left: 25%;
     transform: rotate(5deg);
 }
 
 .bridge-7 {
-    position: absolute;
     bottom: 12%;
     right: 17%;
     transform: rotate(-10deg);
