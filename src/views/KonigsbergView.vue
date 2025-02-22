@@ -6,15 +6,28 @@ const stage = ref(0);
 </script>
 
 <template>
-    <div class="konigsberg">
+    <main>
         <KonigsbergPuzzle v-if="stage === 0" />
-    </div>
+    </main>
 </template>
 
-<style>
-@media (min-width: 1024px) {
-    .konigsberg {
-        display: flex;
+<style scoped>
+main {
+    display: flex;
+
+    opacity: 1;
+    animation: fade 0.5s linear;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
     }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (min-width: 1024px) {
 }
 </style>

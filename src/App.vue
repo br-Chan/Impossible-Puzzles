@@ -10,8 +10,12 @@ import { RouterLink, RouterView } from "vue-router";
             <h1 class="green">I dare you to...</h1>
 
             <nav>
-                <RouterLink to="/">Home</RouterLink>
                 <RouterLink to="/konigsberg">cross some bridges</RouterLink>
+                <RouterLink to="/">colour in a map</RouterLink>
+                <RouterLink to="/">turn some cups around</RouterLink>
+                <RouterLink to="/">move a chess piece</RouterLink>
+                <RouterLink to="/">solve a sliding puzzle</RouterLink>
+                <RouterLink to="/home">Home</RouterLink>
                 <RouterLink to="/about">About</RouterLink>
             </nav>
         </div>
@@ -66,7 +70,6 @@ nav a {
 
 .view {
     display: flex;
-    flex: 2;
     min-height: 100vh;
 }
 
@@ -99,6 +102,7 @@ nav a {
     }
 
     .view {
+        flex: 2;
         padding: 2rem;
         padding-bottom: 0rem;
     }
