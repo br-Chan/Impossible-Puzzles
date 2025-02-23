@@ -18,26 +18,28 @@ const moveToNextPhase = (): void => {
 
 <template>
     <main>
-        <KonigsbergPhase1 v-if="phase === Phase.PHASE_1" :handle-give-up="moveToNextPhase" />
-        <KonigsbergPhase2 v-else-if="phase === Phase.PHASE_2" />
+        <h1 class="green">...to cross some bridges</h1>
+        <div class="phase-container">
+            <KonigsbergPhase1 v-if="phase === Phase.PHASE_1" :handle-give-up="moveToNextPhase" />
+            <KonigsbergPhase2 v-else-if="phase === Phase.PHASE_2" />
+        </div>
     </main>
 </template>
 
 <style scoped>
-main {
-    opacity: 1;
-    animation: fade 0.5s linear;
+h1 {
+    width: 100%;
+    font-weight: 500;
+    font-size: 2.6rem;
+    position: relative;
+    text-align: left;
+    top: -10px;
 }
 
-@keyframes fade {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@media (min-width: 1024px) {
+.phase-container {
+    min-height: 80vh;
+    border: 4px solid rgb(0, 180, 0);
+    border-radius: 20px;
+    padding: 1rem;
 }
 </style>

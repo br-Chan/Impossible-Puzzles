@@ -10,9 +10,7 @@ const props = defineProps<KonigsbergPhase1Props>();
 </script>
 
 <template>
-    <div class="puzzle">
-        <h1 class="green">...to cross some bridges</h1>
-
+    <div class="puzzle fade-in">
         <div class="box">
             <KonigsbergRiver class="upper-river" />
             <KonigsbergRiver class="left-river" />
@@ -45,15 +43,6 @@ const props = defineProps<KonigsbergPhase1Props>();
     align-items: center;
     text-align: center;
     gap: 1rem;
-}
-
-h1 {
-    width: 100%;
-    font-weight: 500;
-    font-size: 2.6rem;
-    position: relative;
-    text-align: left;
-    top: -10px;
 }
 
 .box {

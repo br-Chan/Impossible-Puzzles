@@ -98,7 +98,6 @@ nav a {
         float: right;
         width: calc(100vw - var(--sidebar-width));
         padding: 2rem;
-        padding-bottom: 0rem;
     }
 }
 </style>
