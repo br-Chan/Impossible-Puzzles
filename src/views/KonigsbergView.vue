@@ -25,8 +25,6 @@ const moveToNextPhase = (): void => {
 
 <style scoped>
 main {
-    display: flex;
-
     opacity: 1;
     animation: fade 0.5s linear;
 }

@@ -3,9 +3,7 @@ import { RouterLink, RouterView } from "vue-router";
 </script>
 
 <template>
-    <header>
-        <!-- <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" /> -->
-
+    <div class="sidebar">
         <div class="wrapper">
             <h1 class="green">I dare you...</h1>
 
@@ -19,15 +17,14 @@ import { RouterLink, RouterView } from "vue-router";
                 <RouterLink to="/about">About</RouterLink>
             </nav>
         </div>
-    </header>
-    <div class="view">
+    </div>
+    <div class="content">
         <RouterView />
     </div>
 </template>
 
 <style scoped>
-header {
-    /* line-height: 1.5; */
+.sidebar {
     max-height: 100vh;
     border-bottom: 1px solid var(--color-border);
 }
@@ -45,14 +42,12 @@ h1 {
 }
 
 nav {
-    width: 100%;
     font-size: 12px;
     text-align: center;
 }
 
 nav a.router-link-exact-active {
     color: var(--color-text);
-    /* font-size: 2rem; */
 }
 
 nav a.router-link-exact-active:hover {
@@ -68,15 +63,15 @@ nav a {
     border-bottom-right-radius: calc(infinity * 1px);
 }
 
-.view {
-    display: flex;
+.content {
     min-height: 100vh;
 }
 
 @media (min-width: 1024px) {
-    header {
-        display: flex;
-        flex: 1;
+    .sidebar {
+        float: left;
+        width: var(--sidebar-width);
+        margin-left: calc(var(--sidebar-width) * -1);
         place-items: start;
         padding: 2rem;
         padding-bottom: 0rem;
@@ -87,7 +82,7 @@ nav a {
         margin: 0 2rem 0 0;
     }
 
-    header .wrapper {
+    .sidebar .wrapper {
         display: flex;
         place-items: flex-start;
         flex-wrap: wrap;
@@ -99,8 +94,9 @@ nav a {
         font-size: 1rem;
     }
 
-    .view {
-        flex: 5;
+    .content {
+        float: right;
+        width: calc(100vw - var(--sidebar-width));
         padding: 2rem;
         padding-bottom: 0rem;
     }

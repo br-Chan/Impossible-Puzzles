@@ -40,7 +40,6 @@ const props = defineProps<KonigsbergPhase1Props>();
 
 <style scoped>
 .puzzle {
-    margin-inline: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
