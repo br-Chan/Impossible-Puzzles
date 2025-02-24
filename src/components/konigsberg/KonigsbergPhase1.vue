@@ -1,11 +1,15 @@
 <script setup lang="ts">
+import { getTime } from "@/utils/time";
 import KonigsbergMap from "./KonigsbergMap.vue";
+import type { Dayjs } from "dayjs";
 
 type KonigsbergPhase1Props = {
-    handleGiveUp: () => void;
+    handleGiveUp: (startTime: Dayjs) => void;
 };
 
 defineProps<KonigsbergPhase1Props>();
+
+const startTime = getTime();
 </script>
 
 <template>
@@ -17,7 +21,7 @@ defineProps<KonigsbergPhase1Props>();
 
         <KonigsbergMap />
 
-        <button @click="handleGiveUp">Give up!</button>
+        <button @click="handleGiveUp(startTime)">Give up!</button>
     </div>
 </template>
 
