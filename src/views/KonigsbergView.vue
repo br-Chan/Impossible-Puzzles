@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import KonigsbergPhase1 from "@/components/konigsberg/KonigsbergPhase1.vue";
 import KonigsbergPhase2 from "@/components/konigsberg/KonigsbergPhase2.vue";
-import { calculateTimeTakenUntilNow } from "@/utils/time";
+import { calculateDurationUntilNow } from "@/utils/time";
 import type { Dayjs } from "dayjs";
 import { ref } from "vue";
 
@@ -13,14 +13,14 @@ enum Phase {
 
 const phase = ref(Phase.PHASE_1);
 
-const timeTaken = ref(0);
+const timeTaken = ref("");
 
 const moveToNextPhase = (): void => {
     ++phase.value;
 };
 
 const handleGiveUp = (startTime: Dayjs) => {
-    timeTaken.value = calculateTimeTakenUntilNow(startTime);
+    timeTaken.value = calculateDurationUntilNow(startTime);
     moveToNextPhase();
 };
 </script>
