@@ -13,10 +13,10 @@ const startTime = getTime();
 </script>
 
 <template>
-    <div class="puzzle fade-in">
+    <div class="phase fade-in">
         <p class="prompt">
             Each bridge is one crossing away from tumbling into the river rapids! Can you cross all
-            bridges once (and only once)?
+            bridges exactly once?
         </p>
 
         <KonigsbergMap />
@@ -26,12 +26,11 @@ const startTime = getTime();
 </template>
 
 <style scoped>
-.puzzle {
+.phase {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    margin-inline: 3rem;
 }
 
 .prompt {

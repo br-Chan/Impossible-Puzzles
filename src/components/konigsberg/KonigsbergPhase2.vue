@@ -8,10 +8,19 @@ const props = defineProps<KonigsbergPhase2Props>();
 
 <template>
     <div class="fade-in">
-        <h2>It took you {{ timeTaken }} to give up.</h2>
-        You got cheated a little, that puzzle was impossible. No matter how long you tried, you
-        never could have crossed each bridge exactly once. But how can we know for sure?
+        <section>
+            <h2>It took you {{ timeTaken }} to give up.</h2>
+            <p>
+                In fact, that puzzle was impossible. No matter where you start and in what order you
+                cross those bridges, you never could have crossed each bridge exactly once.
+            </p>
+        </section>
+        <section>
+            <h2>Euler</h2>
+            <p>This impossible puzzle is based on the Seven Bridges of Königsberg</p>
+        </section>
     </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+</style>

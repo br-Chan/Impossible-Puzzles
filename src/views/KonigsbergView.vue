@@ -49,6 +49,6 @@ h1 {
     min-height: 80vh;
     border: 4px solid rgb(0, 180, 0);
     border-radius: 20px;
-    padding: 1rem;
+    padding: 20px;
 }
 </style>
