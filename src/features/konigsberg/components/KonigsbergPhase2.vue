@@ -3,7 +3,7 @@ type KonigsbergPhase2Props = {
     timeTaken: string;
 };
 
-const props = defineProps<KonigsbergPhase2Props>();
+defineProps<KonigsbergPhase2Props>();
 </script>
 
 <template>
@@ -22,5 +22,4 @@ const props = defineProps<KonigsbergPhase2Props>();
     </div>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>

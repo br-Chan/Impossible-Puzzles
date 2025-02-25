@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import KonigsbergPhase1 from "@/components/konigsberg/KonigsbergPhase1.vue";
-import KonigsbergPhase2 from "@/components/konigsberg/KonigsbergPhase2.vue";
 import { calculateDurationUntilNow } from "@/utils/time";
 import type { Dayjs } from "dayjs";
 import { ref } from "vue";
+import KonigsbergPhase1 from "../components/KonigsbergPhase1.vue";
+import KonigsbergPhase2 from "../components/KonigsbergPhase2.vue";
 
 enum Phase {
     PHASE_1,

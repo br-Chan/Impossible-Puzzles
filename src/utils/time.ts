@@ -13,6 +13,6 @@ export const calculateDurationUntilNow = (startTime: Dayjs) => {
         units: ["h", "m", "s"],
         round: true,
         conjunction: " and ",
-        serialComma: false
+        serialComma: false,
     });
 };
